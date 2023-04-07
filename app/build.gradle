@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.myapplication'
+    namespace 'ir.lambdanexus.evoval'
     compileSdk 33
 
     defaultConfig {

@@ -3,35 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/firstFragment">
+    app:startDestination="@id/FirstFragment">
+
     <fragment
-        android:id="@+id/firstFragment"
+        android:id="@+id/FirstFragment"
         android:name="ir.lambdanexus.evoval.FirstFragment"
-        android:label="Yes or No"
-        tools:layout="@layout/ask" >
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
         <action
-            android:id="@+id/action_firstFragment_to_gay_isfalse"
-            app:destination="@id/gay_isfalse" />
-        <action
-            android:id="@+id/action_firstFragment_to_gay_istrue"
-            app:destination="@id/gay_istrue" />
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
-        android:id="@+id/gay_istrue"
-        android:name="ir.lambdanexus.evoval.ask_istrue"
-        android:label="Yes"
-        tools:layout="@layout/fragment_ask_istrue" >
+        android:id="@+id/SecondFragment"
+        android:name="ir.lambdanexus.evoval.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
         <action
-            android:id="@+id/action_gay_istrue_to_firstFragment"
-            app:destination="@id/firstFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/gay_isfalse"
-        android:name="ir.lambdanexus.evoval.ask_isfalse"
-        android:label="No"
-        tools:layout="@layout/fragment_ask_isfalse" >
-        <action
-            android:id="@+id/action_gay_isfalse_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
